@@ -18,7 +18,7 @@ $ aws --cli-auto-prompt
 ### you can set ENV for IAM/ user credential after creating access key from IAM
 these ENV can be added to .profile or in the without saving it permenatly
 ```bash
-export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-export AWS_DEFAULT_REGION=us-west-2
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAM****
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE***
+export AWS_DEFAULT_REGION=us-wes***
 ```
