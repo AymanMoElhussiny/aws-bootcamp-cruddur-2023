@@ -22,3 +22,7 @@ export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAM****
 export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE***
 export AWS_DEFAULT_REGION=us-wes***
 ```
+## you can set gitpos env for the AWS varible so they are inherted in each pod
+
+### set AWS budget 
+- [AWS create budget example](https://docs.aws.amazon.com/cli/latest/reference/budgets/create-budget.html#examples)
