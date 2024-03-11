@@ -26,3 +26,4 @@ export AWS_DEFAULT_REGION=us-wes***
 
 ### set AWS budget 
 - [AWS create budget example](https://docs.aws.amazon.com/cli/latest/reference/budgets/create-budget.html#examples)
+Get 
