@@ -2,8 +2,6 @@
 # Week 1 — App Containerization
 ## working on App containerization
 ## Refrences 
-- 
-- 
 ### 1- install Docker extention for vscode
 ### 2- Dockerize the backend
 ```bash
@@ -22,18 +20,14 @@ cd ..
 - append to the url to /api/activities/home
 - you should get back json
 ### 3- Add dockerfile to run flask but from dockerfile instead
+check file://backend-flask/Dockerfile
 ```
 FROM python:3.10-slim-buster
-
 WORKDIR /backend-flask
-
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-
 COPY . .
-
 ENV FLASK_ENV=development
-
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
