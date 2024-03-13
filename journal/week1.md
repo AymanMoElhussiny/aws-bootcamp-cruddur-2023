@@ -41,7 +41,35 @@ docker build -t  backend-flask ./backend-flask
 make sure that docker extention is installed 
 ```bash
 docker run --rm -p 4565:4567 -d -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
+```
 
-unset FRONTEND_URL="*"
-unset BACKEND_URL="*"
+you can test the backend using the below 
+```bash
+curl -X GET http://localhost:4565/api/activities/home -H "Accept: application/json" -H "Content-Type: application/json"
+```
+### 5- Containerize the frontend
+### 5.1 run NPM install
+since NPM is need to be installed before building the container since it needs to COPY the content of node_modules 
+```bash
+cd frontend-react-js
+npm -i
+```
+### 5.2 create dockerfile fore frontend 
+check [Dockerfile](../frontend-react-js/Dockerfile)
+```
+FROM node:16.18
+ENV PORT=3000
+COPY . /frontend-react-js
+WORKDIR /frontend-react-js
+RUN npm install
+EXPOSE ${PORT}
+CMD ["npm", "start"]
+```
+### 5.3 Build the container 
+```
+docker build -t frontend-react-js ./frontend-react-js
+```
+### 5.4 Run the Container
+```
+docker run -p 3000:3000 -d frontend-react-js
 ```
