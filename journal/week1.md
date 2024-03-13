@@ -20,7 +20,7 @@ cd ..
 - append to the url to /api/activities/home
 - you should get back json
 ### 3- Add dockerfile to run flask but from dockerfile instead
-check [Dockerfile](backend-flask/Dockerfile)
+check [Dockerfile](../backend-flask/Dockerfile)
 ```
 FROM python:3.10-slim-buster
 WORKDIR /backend-flask
