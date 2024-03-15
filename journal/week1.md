@@ -52,7 +52,7 @@ curl -X GET http://localhost:4565/api/activities/home -H "Accept: application/js
 since NPM is need to be installed before building the container since it needs to COPY the content of node_modules 
 ```bash
 cd frontend-react-js
-npm -i
+npm i
 ```
 ### 5.2 create dockerfile fore frontend 
 check [Dockerfile](../frontend-react-js/Dockerfile)
@@ -73,3 +73,4 @@ docker build -t frontend-react-js ./frontend-react-js
 ```
 docker run -p 3000:3000 -d frontend-react-js
 ```
+### 6 Update the api for notification
